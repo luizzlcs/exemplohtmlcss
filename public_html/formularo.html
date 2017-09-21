@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Formulário</title>
+        <meta charset="UTF-8">  
+        <link rel="stylesheet" href="css/estilo.css" />
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        
+    </head>
+    <body>
+        <h2 class="titulos"> Cadastro de dados Pessois</h2>
+        <fieldset>  
+            <legend>Dados</legend>
+            <form method="get" action="sucesso.html">
+                <label>Nome:</label>
+                <input type="text" name="nome" class="inputArrendo" id="nome" required/>
+                <br/> 
+                <label>Senhal</label>
+                <input type="password" name="senha" id="senha" required/>
+                <br/>
+                <label>Email:</label>
+                <input  type="email" name ="email" id="email" required/>
+                <br/>
+                <label>Nascimento:</label>
+                <input type="date" name="nasc" id="nasc" min="2010-01-01" required/>
+                <br/>
+                <label>Idade: </label>
+                <input type="number" name="Idade" id="idade" min="18" max="60" />
+                <br/>
+                <fieldset>
+                    <legend> Sexo:</legend>
+                    <input  type="radio" name ="sexo" value="masculino" checked/>Masculino
+                    <input  type="radio" name ="sexo" value="feminino"/>Feminino
+                    <input  type="radio" name ="sexo" value="outros"/>outros
+                    
+                </fieldset>
+                <br/>
+                <label>Naturalidade</label>
+                <select name="Cidade">
+                    <optgroup label ="Rio G rand do Norte">
+                        <option value="NAT"> Natal</option>
+                        <option value="MOS"> Mossoró</option>
+                    
+                    <optgroup label ="Pernambuco" > 
+                        <option value="OLD"> Olinda</option>
+                        <option value="REC" selected>Recife</option>
+                    
+                    <optgroup label="Paraíba" />
+                        <option value="GUA"> Guarabira</option>
+                        <option value="JPA" selected>João Pessoa</option>
+                        
+                    </optgroup>
+                    
+                </select>
+                <br/>
+                <label>Sua foto:</label>
+                <input type="file" name="foto"id="foto"/>
+                <br/>
+                <input  type="submit" class="btn btn-warning" value="Cadastrar" />
+                <input type="reset" class="btn btn-danger" value="Limpar"/>
+                <input type="button"class="btn btn-secondary" value="Veja" onclick = "alert('Virus inserido comsucesso!');"/>
+            </form>    
+        </fieldset>   
+    </body>
+</html>
